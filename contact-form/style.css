@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #113f67, #113f67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.required {
+  color: red;
+}
+
+.card {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  width: 150px;
+  max-width: 100%;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #113f67, #113f67);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socials img {
+  width: 30px;
+  cursor: pointer;
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+}
+
+.popup img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.popup h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.popup button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #113f67;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .popup {
+    width: 90%;
+    padding: 20px;
+  }
+  form input,
+  form textarea,
+  button {
+    font-size: 14px;
+  }
+}
+
+.left {
+  margin-bottom: 20px;
+}

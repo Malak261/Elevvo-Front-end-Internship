@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | Techify</title>
+    <link rel="stylesheet" href="home.css" />
+    <script defer src="home.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Toggle FAQ
+      document.querySelectorAll(".faq").forEach((faq) => {
+        faq.addEventListener("click", () => {
+          faq.classList.toggle("open");
+        });
+      });
+
+      // Toggle nav menu
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    });
+  </script>
+
+  <body>
+    <nav class="top-nav">
+      <!-- Hamburger icon (mobile only) -->
+      <div
+        class="hamburger"
+        onclick="document.querySelector('.nav-links').classList.toggle('show')"
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="nav-left">
+        <h1 class="logo">Techify</h1>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Solution</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="signup-btn"><i class="fa fa-user"></i> Sign up</button>
+        <div class="theme-switch">
+          <input type="checkbox" id="themeToggle" />
+          <label for="themeToggle" class="slider"></label>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h2>Flexible Pricing Plans</h2>
+        <p>
+          Founded by a team of data enthusiasts, we specialize in cutting-edge
+          SaaS analytics.
+        </p>
+        <div class="cta-toggle">
+          <button id="monthlyBtn" class="toggle-btn active">Monthly</button>
+          <button id="yearlyBtn" class="toggle-btn">Yearly</button>
+        </div>
+        <a href="#" class="cta-main-btn">Start Free Trial</a>
+      </div>
+    </header>
+
+    <section class="pricing-section">
+      <div class="card">
+        <h3>Starter Plan</h3>
+        <p class="price" data-monthly="$50" data-yearly="$500">$50</p>
+        <ul>
+          <li>Advanced analytics tools</li>
+          <li>Up to 10 users</li>
+        </ul>
+        <a href="#" class="cta-btn">Explore plan</a>
+      </div>
+      <div class="card">
+        <h3>Professional Plan</h3>
+        <p class="price" data-monthly="$150" data-yearly="$1400">$150</p>
+        <ul>
+          <li>All Starter Features</li>
+          <li>Priority Support</li>
+          <li>Custom Dashboards</li>
+        </ul>
+        <a href="#" class="cta-btn">Explore plan</a>
+      </div>
+      <div class="card">
+        <h3>Enterprise Plan</h3>
+        <p class="price" data-monthly="$300" data-yearly="$2700">$300</p>
+        <ul>
+          <li>All Pro Features</li>
+          <li>Unlimited Users</li>
+          <li>Dedicated Support</li>
+        </ul>
+        <a href="#" class="cta-btn">Contact us</a>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="question">What is finance analytics?</div>
+        <div class="answer">
+          Finance analytics helps you understand your data better for smarter
+          decisions.
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">How do I start using the platform?</div>
+        <div class="answer">
+          Sign up, choose a plan, and get started in minutes.
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question">Can I cancel anytime?</div>
+        <div class="answer">
+          Yes, you can cancel or switch plans at any time.
+        </div>
+      </div>
+    </section>
+
+    <footer><p>&copy; 2025 Techify. All rights reserved.</p></footer>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookHub</title>
+    <link rel="stylesheet" href="sidebar.css" />
+    <script defer src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar collapsed" id="sidebar">
+        <div class="sidebar-header">
+          <button class="hamburger" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h2 class="logo">📘 BookHub</h2>
+        </div>
+
+        <ul class="nav-links">
+          <li><i class="fas fa-home"></i><span>Home</span></li>
+          <li><i class="fas fa-book"></i><span>Library</span></li>
+          <li><i class="fas fa-user"></i><span>Profile</span></li>
+          <li><i class="fas fa-cog"></i><span>Settings</span></li>
+          <li><i class="fas fa-info-circle"></i><span>About</span></li>
+        </ul>
+      </aside>
+
+      <!-- Overlay for mobile -->
+      <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div class="search-container">
+            <input type="text" placeholder="Search for books..." />
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+          </div>
+          <nav class="category-bar">
+            <div class="category-icon active">
+              <i class="fas fa-book"></i><span>All</span>
+            </div>
+            <div class="category-icon">
+              <i class="fas fa-tablet-alt"></i><span>eBooks</span>
+            </div>
+            <div class="category-icon">
+              <i class="fas fa-star"></i><span>New</span>
+            </div>
+            <div class="category-icon">
+              <i class="fas fa-fire"></i><span>Bestsellers</span>
+            </div>
+            <div class="category-icon">
+              <i class="fas fa-headphones"></i><span>Audiobooks</span>
+            </div>
+          </nav>
+        </header>
+
+        <section class="book-carousel">
+          <h2 class="section-title">Popular</h2>
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="book-card">
+                <img src="images/OIP.webp" alt="It" />
+                <h3>It</h3>
+                <p>Stephen King</p>
+              </div>
+              <div class="book-card">
+                <img
+                  src="images/OIP (1).webp"
+                  alt="The Ballad Of Never After"
+                />
+                <h3>The Ballad Of Never After</h3>
+                <p>Stephanie Garber</p>
+              </div>
+              <div class="book-card">
+                <img src="images/OIP (2).webp" alt="Klara and the Sun" />
+                <h3>Klara and the Sun</h3>
+                <p>Kazuo Ishiguro</p>
+              </div>
+              <div class="book-card">
+                <img src="images/OIP (3).webp" alt="Court Of Mist and Fury" />
+                <h3>Court Of Mist and Fury</h3>
+                <p>Sarah J. Maas</p>
+              </div>
+              <div class="book-card">
+                <img
+                  src="images/40916679.jpg"
+                  alt="A Good Girl's Guide To Murder"
+                />
+                <h3>A Good Girl's Guide To Murder</h3>
+                <p>Holly Jackson</p>
+              </div>
+            </div>
+            <button class="carousel-btn left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

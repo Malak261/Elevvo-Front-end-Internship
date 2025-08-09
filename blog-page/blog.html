@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Blog</title>
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <!-- New SaaS-style Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <span> 🧘🏻‍♀️Story Snippets</span>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth-buttons">
+        <a href="#" class="auth-btn login">Log in</a>
+        <a href="#" class="auth-btn signup">Sign up</a>
+      </div>
+    </header>
+
+    <section class="controls">
+      <input type="text" id="search" placeholder="Search blog posts..." />
+      <div class="filters">
+        <button onclick="filterPosts('All')">All</button>
+        <button onclick="filterPosts('Tech')">Tech</button>
+        <button onclick="filterPosts('Travel')">Travel</button>
+        <button onclick="filterPosts('Food')">Food</button>
+      </div>
+    </section>
+
+    <section id="posts" class="posts"></section>
+
+    <footer class="footer">
+      <p>✨ Made with love by Cozy Studio</p>
+    </footer>
+
+    <script src="blog.js"></script>
+  </body>
+</html>

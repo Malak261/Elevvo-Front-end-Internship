@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f7fb;
+  color: #1e1e1e;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef3ff;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+.hero-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.hero-subtext {
+  margin-left: 2rem; /* try -1rem to -2rem, adjust as needed */
+}
+.hero-subtext {
+  margin-top: -4rem; /* Pulls text & buttons closer to the title */
+}
+
+.hero h1 {
+  font-size: 10rem;
+  color: #2b2e4a;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.hero-buttons a {
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  background: #3366ff;
+  color: white;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.bear-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+/* Features */
+.features {
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+  max-width: 220px;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #3366ff;
+  margin-bottom: 0.5rem;
+}
+
+/* Reviews */
+.reviews {
+  padding: 3rem 2rem;
+  background: #e5f0ff;
+  text-align: center;
+}
+
+.reviews h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #2b2e4a;
+}
+
+.review-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.review {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  max-width: 280px;
+  font-style: italic;
+}
+
+.review blockquote {
+  margin-bottom: 0.8rem;
+}
+
+.review span {
+  font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+}
+
+/* Pricing */
+.pricing {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.plan.featured {
+  border: 2px solid #3366ff;
+}
+
+.plan .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.plan button {
+  background: #3366ff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background: #f2f2f2;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #333;
+}
+
+.social-icons i {
+  margin: 0 0.5rem;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* === Responsive Layouts === */
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero-subtext p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .hero-buttons a {
+    margin: 0.5rem 0;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .bear-img {
+    margin-top: 3rem;
+    max-width: 180px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero h1 {
+    font-size: 6rem;
+  }
+
+  .hero-subtext p {
+    font-size: 1.4rem;
+  }
+
+  .bear-img {
+    max-width: 220px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .hero h1 {
+    font-size: 10rem;
+  }
+
+  .hero-subtext p {
+    font-size: 2rem;
+  }
+
+  .bear-img {
+    max-width: 300px;
+  }
+}
